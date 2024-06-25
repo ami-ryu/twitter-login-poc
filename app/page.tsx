@@ -2,7 +2,6 @@
 'use client';
 
 import { signIn, signOut, useSession } from 'next-auth/react';
-import Provider from './session-provider';
 
 export default function Home() {
   const { data: session } = useSession();
@@ -12,7 +11,10 @@ export default function Home() {
       {!session && (
         <>
           <h1>Not signed in</h1>
-          <button onClick={() => signIn('twitter')}>
+          <button
+            style={{ width: '500px', height: '200px' }}
+            onClick={() => signIn('twitter')}
+          >
             Sign in with Twitter
           </button>
         </>
