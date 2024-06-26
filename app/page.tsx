@@ -11,12 +11,23 @@ export default function Home() {
       {!session && (
         <>
           <h1>Not signed in</h1>
-          <button
-            style={{ width: '500px', height: '200px' }}
-            onClick={() => signIn('twitter')}
-          >
-            Sign in with Twitter
-          </button>
+          <div>
+            <button
+              style={{ width: '500px', height: '100px' }}
+              onClick={() => signIn('twitter')}
+            >
+              Sign in with Twitter
+            </button>
+          </div>
+          <br />
+          <div>
+            <button
+              style={{ width: '500px', height: '100px' }}
+              onClick={() => signIn('apple')}
+            >
+              Sign in with Apple
+            </button>
+          </div>
         </>
       )}
       {session && (
